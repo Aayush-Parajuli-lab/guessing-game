@@ -1,7 +1,10 @@
 import random
 
-def Playround():
-    print("Welcome to the Guessing Game !")
+Diffuculties = {
+    "easy":(10,5),
+    "medium":(50,7),
+    "hard":(100,10),    
+}
 
     secret = random.randint(1,10)
     attempt = 1
