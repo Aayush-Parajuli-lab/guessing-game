@@ -2,7 +2,6 @@ import random
 
 def Playround():
     print("Welcome to the Guessing Game !")
-
     secret = random.randint(1,10)
     attempt = 1
 
@@ -12,6 +11,7 @@ def Playround():
         except ValueError:
             print("Please enter a Whole number")
             continue
+        attempt += 1
         if guess < secret:
             print("Too Low!")
         elif guess > secret:
@@ -33,11 +33,5 @@ def main():
 main()
 
 
-secret = random.randint(1,10)
-guess = int(input("Guess the number between 1 and 10 : "))
 
-if guess == secret:
-    print("Correct you win!")
-else:
-    print(f"wrong the Correct number was {secret} ")
 
